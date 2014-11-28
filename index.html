@@ -22,8 +22,8 @@
     <style>
       html, body, #map-canvas {
         height: 100%;
-        margin: 1px;
-        padding: 1px
+        margin: 15px;
+        padding: 15px
       }
     </style>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=en"></script>
@@ -51,24 +51,19 @@ function initialize() {
       '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
       '<div id="bodyContent">'+
       '<p>첫 번째 소리 테스트 입니다. ' +
-<<<<<<< HEAD
       '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
-     'Link</a> '+
+      'Link</a> '+
       '(last visited June 22, 2009).</p>'+
       '<p><img src="test1-1.png" /></p>'+
-            '<p><img src="test1-2.png" /></p>'+
-=======
       '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
       'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
       '(last visited June 22, 2009).</p>'+
-      '<p><img src="https://31.media.tumblr.com/1d5bdeb445584378cfc699cea559b84f/tumblr_inline_nfl215WbW71qzlze5.png" /></p>'+
       '</div>'+
->>>>>>> FETCH_HEAD
       '</div>';
 
   var infowindow = new google.maps.InfoWindow({
       content: contentString,
-      maxWidth: 500
+      maxWidth: 400
   });
 
   var marker = new google.maps.Marker({
@@ -94,18 +89,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   	</head>
   	<body>
     <div id="map-canvas"></div>
-<<<<<<< HEAD
-    <div id='player6h2a0cDp'></div>
-<script type='text/javascript'>
-    jwplayer('player6h2a0cDp').setup({
-        playlist: '//content.jwplatform.com/feed/6h2a0cDp.rss',
-        width: '320',
-        height: '180',
-        primary: 'flash'
-    });
 </script>
   	</body>
-=======
   </body>
->>>>>>> FETCH_HEAD
 </html>
