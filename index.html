@@ -4,26 +4,24 @@
   	<title>Water Sound Map</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <script src="soundmanager2.js"></script>
-
-<script src="https://jwpsrv.com/library/ekHAEHSlEeSraBLddj37mA.js"></script>
-	<script>
-	soundManager.setup({
-	  // where to find flash audio SWFs, as needed
-	  url: '/swf/soundmanager2.swf',
-	  onready: function() {
-		// SM2 is ready to play audio!
-	  }
-	});
-	</script>
+	
+    <script src="./audiojs/audio.min.js"></script>
     
+    
+	<script>
+	  audiojs.events.ready(function() {
+		var as = audiojs.createAll();
+	  });
+	</script>
+   
     <title>Info window with <code>maxWidth</code></title>
+    <h1>&nbsp;Water Sound Map</h1>
 
     <style>
       html, body, #map-canvas {
-        height: 100%;
-        margin: 15px;
-        padding: 15px
+        height: 90%;
+        margin: 13px;
+        padding: 13px
       }
     </style>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=en"></script>
@@ -37,7 +35,7 @@ function initialize() {
   var myLatlng = new google.maps.LatLng(36.361243, 127.357535);
   var mapOptions = {
  	mapTypeId: google.maps.MapTypeId.HYBRID,
-    zoom: 18,
+    zoom: 15,
     center: myLatlng,
   };
 
@@ -51,6 +49,8 @@ function initialize() {
       '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
       '<div id="bodyContent">'+
       '<p>첫 번째 소리 테스트 입니다. ' +
+	  '<p><img src="img1.jpg" /></p>'+
+      '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
       '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
       'Link</a> '+
       '(last visited June 22, 2009).</p>'+
@@ -62,8 +62,8 @@ function initialize() {
       '</div>';
 
   var infowindow = new google.maps.InfoWindow({
-      content: contentString,
-      maxWidth: 400
+      content: contentString, 
+      maxWidth: 600
   });
 
   var marker = new google.maps.Marker({
@@ -74,12 +74,10 @@ function initialize() {
 
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
-    soundManager.createSound({
-  		url: 'ZOOM0006.mp3',
-  		autoPlay: true,
-  		pan: 0,
-  		volume: 50
-		});
+    audiojs.events.ready(function() {
+		var as = audiojs.createAll();
+	  });
+
   });
 }
 
@@ -89,6 +87,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   	</head>
   	<body>
     <div id="map-canvas"></div>
+
 </script>
   	</body>
   </body>
