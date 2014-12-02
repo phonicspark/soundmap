@@ -20,15 +20,8 @@
 	<meta name="description" content="brief page description" />
 
 	<meta name="keywords" content="keywords, for, your, site" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-	
-    <script src="./audiojs/audio.min.js"></script>
-	<script>
-	  audiojs.events.ready(function() {
-		var as = audiojs.createAll();
-	  });
-	</script>
+
+
 
 	<style type="text/css">
 
@@ -37,7 +30,7 @@
 	* {
 
 		margin: 0px;
-
+		height: 100%;
 		paddding: 0px;
 
 		}
@@ -46,14 +39,14 @@
 
 	#wrapper {
 
-		background-color: #ffF;
+		background-color: #00F;
 
-		border: 0px solid #000;
+		border: 3px solid #000;
 
-		padding: 0px;
+		padding: 5px;
 
-		width: 100%;
 
+		height:100%;
 		margin: 0px auto;
 
 		}
@@ -62,13 +55,9 @@
 
 	#header {
 
-		background-color: #58b2f1;
+		background-color: #0F0;
 
-		height: 50px;
-		
-				font-family: Courier;
-				font-size: 15px;
-				color: #fffff0;
+		height: 60px;
 
 		}
 
@@ -76,17 +65,13 @@
 
 	#left {
 
-		background-color: #fffff0;
+		background-color: #F00;
 
-		width: 120px;
+		width: 180px;
 
-		height: 500px;
+		height: 300px;
 
 		float: left;
-
-		font-family: Courier;
-		font-size: 10px;
-		color: #000000;		
 
 		}
 
@@ -94,17 +79,13 @@
 
 	#right {
 
-		background-color: #fffff0;
+		background-color: #FF0;
 
-		width: 120px;
+		width: 150px;
 
-		height: 500px;
+		height: 300px;
 
 		float: right;
-		
-		font-family: Courier;
-		font-size: 10px;
-		color: #000000;
 
 		}
 
@@ -112,17 +93,14 @@
 
 	#center {
 
-		background-color: #fff999;
+		background-color: #F0F;
 
-		margin-left: 125px;
+		margin-left: 180px;
 
-		margin-right: 125px;
+		margin-right: 150px;
 
-		height: 500px;
-		
-		font-family: Courier;
-		font-size: 10px;
-		color: #000000;
+		height: 300px;
+
 		}
 
 		
@@ -131,9 +109,9 @@
 
 		height: 50px;
 
-		background-color: #58b2f1;
+		background-color: #000;
 
-		color: #000;
+		color: #FF0;
 
 		}
 
@@ -147,11 +125,7 @@
 
 		height: 50px;
 
-		background-color: #58b2f1;
-		
-				font-family: Courier;
-				font-size: 10px;
-				color: #fffff0;
+		background-color: #0FF;
 
 		}
 
@@ -163,7 +137,6 @@
 
 	</style>
 
-</style>
 
 
 </head>
@@ -173,7 +146,8 @@
 <div id="wrapper">
 
 	<div id="header">
-	<p>&nbsp;</p>&nbsp;&nbsp;Water Sound Map
+
+	this is the header
 
 	</div>
 
@@ -185,144 +159,23 @@
 
 		<div id="left">
 
-		about</p></p>
-		sound map</p><li></li></p>
-		contact</p></p>
+		left column
+
 		</div>
 
 	
 
 		<div id="right">
 
-		Tag Browser
+		right column
 
 		</div>
 
+	
 
 		<div id="center">
-		
-		    <div id="map-canvas"></div>
-    <style>
-      html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-    </style>
-					<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=en"></script>
-	
-					<script>
-					// This example displays a marker at the center of Australia.
-					// When the user clicks the marker, an info window opens.
-					// The maximum width of the info window is set to 200 pixels.
 
-				function initialize() {
-					var image = './icon2.png';
-					var myLatlng = new google.maps.LatLng(36.361243, 127.357535);
-					var mapOptions = {
-					mapTypeId: google.maps.MapTypeId.HYBRID,
-					zoom: 16,
-					center: myLatlng,
-					};
-
-				// set a map and applying tilt
-				  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-				  map.setTilt(45);
-  
-					  var bounds = new google.maps.LatLngBounds();
-
-					// Multiple Markers
-					var markers = [
-						['Test 1', 36.361243, 127.357535],
-						['Test 2', 36.361243, 127.362335]
-					];
-						// Info Window Content
-					var infoWindowContent = [
-						['<div style="width:500px; height:290px;" class="info-window">' +
-						'<div id="content">'+
-					  '<div id="siteNotice">'+
-					  '</div>'+
-					  '<p></p>'+
-					  '<h5 id="firstHeading" class="firstHeading">Water Sound Sample Test</h5>'+
-					  '<div id="bodyContent">'+
-					  '<h5>첫 번째 소리 테스트 입니다.</h5> ' +
-					  '<img width="250" src="img1.png" />'+
-					  '<audio src="./ZOOM0006.mp3" preload="auto" /></audio>' +
-					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
-					  'Link</a> '+
-					  '(last visited June 22, 2009).</p>'+
-					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-					  '(last visited June 22, 2009).</p>'+
-					  '</div>'+
-					  '</div>'],
-	   
-						['<div style="width:500px; height:290px;" class="info-window">' +
-						'<div id="content">'+
-					  '<div id="siteNotice">'+
-					  '</div>'+
-					  '<p></p>'+
-					  '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
-					  '<div id="bodyContent">'+
-					  '<p>두 번째 소리 테스트 입니다. ' +
-					  '<p><img src="img1.png" /></p>'+
-					  '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
-					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
-					  'Link</a> '+
-					  '(last visited June 22, 2009).</p>'+
-					  '<p><img src="test1-1.png" /></p>'+
-					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-					  '(last visited June 22, 2009).</p>'+
-					  '</div>'+
-					  '</div>']
-					];  
-  
-  
-
-					// Display multiple markers on a map(+ and set maxWidth)
-					var infoWindow = new google.maps.InfoWindow({
-					  //maxWidth: 400,
-				  }), marker, i;
-
-
-
-					// Loop through our array of markers & place each one on the map  
-					for( i = 0; i < markers.length; i++ ) {
-						var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-						bounds.extend(position);
-						marker = new google.maps.Marker({
-							position: position,
-							map: map,
-							icon: image,
-							title: markers[i][0]
-						});
-					   // Allow each marker to have an info window    
-						google.maps.event.addListener(marker, 'click', (function(marker, i) {
-							return function() {
-								infoWindow.setContent(infoWindowContent[i][0]);
-								infoWindow.open(map, marker);
-								  audiojs.events.ready(function() {
-								var as = audiojs.createAll();
-								});
-							}
-						})(marker, i));
-
-						// Automatically center the map fitting all markers on the screen
-						map.fitBounds(bounds);
-					}
-
-					// Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-					var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-						this.setZoom(15);
-						google.maps.event.removeListener(boundsListener);
-					});
-	
-				}
-
-				google.maps.event.addDomListener(window, 'load', initialize);
-
-					</script>
+		center column
 
 		</div>
 
@@ -338,7 +191,7 @@
 
 		<div id="foot1">
 
-	<p>&nbsp;</p>&nbsp;&nbsp;All rights reserved. 
+		footer section 1
 
 		</div>
 
@@ -346,7 +199,7 @@
 
 		<div id="foot2">
 
-
+		footer section 2
 
 		</div>
 
