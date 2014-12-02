@@ -6,8 +6,9 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
+	<title>Water Sound Map</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
 	
     <script src="./audiojs/audio.min.js"></script>
 	<script>
@@ -16,237 +17,153 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	  });
 	</script>
 	
-<title>Three column CSS layout: 100% height with footer | Savio.no</title>
-<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1"/>
-<meta http-equiv="imagetoolbar" content="no"/>
-<script type='text/javascript'>window.mod_pagespeed_start = Number(new Date());</script><link rel="shortcut icon" href="/favicon.ico"/>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1"/>
+	<meta http-equiv="imagetoolbar" content="no"/>
+	<script type='text/javascript'>window.mod_pagespeed_start = Number(new Date());</script><link rel="shortcut icon" href="/favicon.ico"/>
+
 <style type="text/css">
 
-/*
-
-CSS-file for three column layout 2006
-
-
-
-Developed by Eivind Savio
-
-*/
-
-* /*Set's border, padding and margin to 0 for all values*/
-
-{
-
-padding: 0;
-
-margin: 0;
-
-border: 0;
-
-}
-
-body, html {
-
-color: #000; 
-
-font-family: Verdana, Arial, Tahoma, sans-serif;
-
-background-color: #eee; 
-
-text-align: center; /*** Centers the design in old IE versions ***/
-
-height: 100%;
-
-}
-
-body {
-
-font-size: 70%;
-
-}
-
-p {padding: 7px 0 7px 0;}
-
-
-
-a {
-
-color: #000099;
-
-}
-
-a:hover{
-
-color: #0000FF;
-
-text-decoration: none;
-
-}
-
-
-
-h1, h2, h3 {
-
-font-weight: bold;
-
-padding-bottom: 5px;
-
-}
-
-h1 {
-
-font-size: 2em;
-
-}
-
-h2 {
-
-font-size: 1.4em;
-
-}
-
-h3 {
-
-font-size: 1.3em;
-
-}
-
-h1 a, #header h2{
-
-color: #fff;
-
-}
-
-.clear { clear: both; }
-
-#mainContainer {
-
-width: 760px;
-
-margin: 0 auto; /*** Centers the design ***/
-
-min-height: 100%;
-
-background: #add8e6 url(/examples/three-column-100-bg.gif) repeat-y; /*** This is our faux columns ***/
-
-text-align: left; /*** Because we centered the text in body we have to move the text back to left aligning ***/
-
-}
-
-* html #mainContainer {
-
-height: 100%;  /*** IE doesn't support min-height, but instead it handles height as min-height so we need to hack the height ***/
-
-}
-
-/**************************
-
-HEADER
-
-**************************/
-
-#header {
-
-background: #000099;
-
-padding: 10px
-
-}
-
-/**************************
-
-CONTENT AND COLUMNS
-
-**************************/
-
-.outer {
-
-padding-left: 165px;  
-
-}
-
-* html .outer {
-
-padding-right: 120px; /* Normally this shouldn't be in this hack, it should be in .outer, but because of IE7 I had to */
-
-}
-
-.inner {
-
-width: 595px; /*** This width is for non-IE browsers. Mozilla makes this necessary. Be sure to check your layout in different browsers if you changes this value. Especially IE7 seems to create a horisontal scroll if this value is set too large ***/
-
-padding-bottom: 30px;
-
-}
-
-* html .inner {
-
-width: 100%;
-
-}
+		/*
+		CSS-file for three column layout 2006
+		Developed by Eivind Savio
+		*/
+
+		* /*Set's border, padding and margin to 0 for all values*/
+
+		{
+		padding: 0;
+		margin: 0;
+		border: 0;
+		}
+
+		body, html {
+		color: #000; 
+		font-family: Verdana, Arial, Tahoma, sans-serif;
+		background-color: #eee; 
+		text-align: center; /*** Centers the design in old IE versions ***/
+		height: 100%;
+		}
+
+		body {
+		font-size: 70%;
+		}
+
+		p {padding: 7px 0 7px 0;}
+
+		a {
+		color: #000099;
+		}
+
+		a:hover{
+		color: #0000FF;
+		text-decoration: none;
+		}
+
+		h1, h2, h3 {
+		font-weight: bold;
+		padding-bottom: 5px;
+		}
+
+		h1 {
+		font-size: 2em;
+		}
+
+		h2 {
+		font-size: 1.4em;
+		}
+
+		h3 {
+		font-size: 1.3em;
+		}
+
+		h1 a, #header h2{
+		color: #fff;
+		}
+
+	.clear { clear: both; }
+
+	#mainContainer {
+		width: 100%;
+		margin: 0 auto; /*** Centers the design ***/
+		min-height: 100%;
+		background: #add8e6 url(/examples/three-column-100-bg.gif) repeat-y; /*** This is our faux columns ***/
+		text-align: left; /*** Because we centered the text in body we have to move the text back to left aligning ***/
+	}
+
+	* html #mainContainer {
+		height: 100%;  /*** IE doesn't support min-height, but instead it handles height as min-height so we need to hack the height ***/
+	}
+
+	/**************************
+	HEADER
+	**************************/
+
+	#header {
+		background: #000099;
+		padding: 10px
+	}
+
+	/**************************
+	CONTENT AND COLUMNS
+	**************************/
+
+	.outer {
+		padding-left: 165px;  
+	}
+
+	* html .outer {
+		padding-right: 120px; /* Normally this shouldn't be in this hack, it should be in .outer, but because of IE7 I had to */
+	}
+
+	.inner {
+		width: 595px; /*** This width is for non-IE browsers. Mozilla makes this necessary. Be sure to check your layout in different browsers if you changes this value. Especially IE7 seems to create a horisontal scroll if this value is set too large ***/
+		padding-bottom: 30px;
+	}
+
+	* html .inner {
+		width: 100%;
+	}
 
 /*** div.inner is wider than its container, div.outer, and so overlaps to the right, pushing
-
 div.right into the proper position. IE expands div.outer instead, requiring a Tan hack to avoid 
-
 blowing the layout apart. IE gets the original 100% width as in the Livingstone layout.
-
 ***/
 
-.float-wrap {
+	.float-wrap {
+		float: left;
+		width: 630px;
+		margin-left: -165px; /*** Same length as .outer padding-left but with negative value ***/
+	}
 
-float: left;
+	* html .float-wrap {
+	/*** No need for hacking IE on this layout ***/
+	}
 
-width: 630px;
+	#content {
+		float: right;
+		width: 70%;
+		background: #fff;
+	}
 
-margin-left: -165px; /*** Same length as .outer padding-left but with negative value ***/
+	* html #content {
+		position: relative;  /*** IE needs this  ***/
+	}
 
-}
+	.contentWrap{
+		padding: 5px;
+	}
 
-* html .float-wrap {
+	.contentWrap ol, .contentWrap ul {
+		margin: 3px 0 5px 35px;
+	}
 
-/*** No need for hacking IE on this layout ***/
+	.contentWrap li {
+		padding-bottom: 2px;
+	}
 
-}
-
-#content {
-
-float: right;
-
-width: 470px;
-
-background: #fff;
-
-}
-
-* html #content {
-
-position: relative;  /*** IE needs this  ***/
-
-}
-
-.contentWrap{
-
-padding: 5px;
-
-}
-
-.contentWrap ol, .contentWrap ul {
-
-margin: 3px 0 5px 35px;
-
-}
-
-.contentWrap li {
-
-padding-bottom: 2px;
-
-}
-
-/**************************
-
-LEFT COLUMN
-
-**************************/
+	/**************************
+	LEFT COLUMN
+	**************************/
 
 /*** div.left is in div.float-wrap, and when div.float-wrap is neg margined to the left, 
 
@@ -255,65 +172,42 @@ div.left is carried over into the proper position.
 ***/
 
 #left {
-
-float: left;
-
-width: 150px;
-
-padding: 5px;
-
+	float: left;
+	width: 15%;
+	padding: 5px;
 }
 
 * html #left {
-
-position: relative;  /*** IE needs this  ***/
-
+	position: relative;  /*** IE needs this  ***/
 }
 
 #left ul {
-
-list-style: none;
-
-padding-bottom: 4px;
-
+	list-style: none;
+	padding-bottom: 4px;
 }
 
 #left li {
-
-padding-bottom: 2px;
-
+	padding-bottom: 2px;
 }
 
 /*************************
-
 RIGHT COLUMN
-
 **************************/
 
 #right {
-
-float: right; 
-
-width: 120px;
-
-padding: 5px;
-
+	float: right; 
+	width: 15%;
+	padding: 5px;
 }
 
 * html #right {
-
-position: relative;  /*** IE needs this  ***/
-
-margin-right: -120px; /*** IE gets this margin. ***/
-
+	position: relative;  /*** IE needs this  ***/
+	margin-right: -120px; /*** IE gets this margin. ***/
 }
 
 #right ul {
-
-list-style: none;
-
-padding-bottom: 4px;
-
+	list-style: none;
+	padding-bottom: 4px;
 }
 
 #right li {
@@ -330,18 +224,12 @@ FOOTER
 
 #footer {
 
-width: 760px;
-
+width: 100%;
 height: 30px; /*** The drawback with this solution is that the height of the footer can't be flexible. If you add so much content to the footer that it extends 30px, you will get a vertical scrollbar and the content will overflow the footer if you don't set overflow to hidden ***/
-
 margin: 0 auto;
-
 margin-top: -30px; /*** By using a negative margin-top we now moves the footer up the same amount as the footer height to avoid vertical scrolling. Remember, if you use borders and padding on your footer you will have to calculate this in your negative margin-top value also. ***/
-
 text-align: center;
-
 background-color: yellow;
-
 }
 
 </style>
@@ -364,7 +252,7 @@ background-color: yellow;
 		    <div id="map-canvas"></div>
 <style>
       html, body, #map-canvas {
-        min-height: 550px;
+        height: 600px;
         margin: 0px;
         padding: 0px
       }
