@@ -1,26 +1,12 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<!DOCTYPE html
 
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 
-		
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-
-	<title>Water Sound Map</title>
-
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-
-	<meta name="author" content="Ralph Phillips" />
-
-	<meta name="description" content="brief page description" />
-
-	<meta name="keywords" content="keywords, for, your, site" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 	
     <script src="./audiojs/audio.min.js"></script>
@@ -30,168 +16,355 @@
 	  });
 	</script>
 	
-	<style type="text/css">
+<title>Three column CSS layout: 100% height with footer | Savio.no</title>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<script type='text/javascript'>window.mod_pagespeed_start = Number(new Date());</script><link rel="shortcut icon" href="/favicon.ico"/>
+<style type="text/css">
 
-	
+/*
 
-	* {
+CSS-file for three column layout 2006
 
-		margin: 0px;
+
+
+Developed by Eivind Savio
+
+*/
+
+* /*Set's border, padding and margin to 0 for all values*/
+
+{
+
+padding: 0;
+
+margin: 0;
+
+border: 0;
+
+}
+
+body, html {
+
+color: #000; 
+
+font-family: Verdana, Arial, Tahoma, sans-serif;
+
+background-color: #eee; 
+
+text-align: center; /*** Centers the design in old IE versions ***/
+
 height: 100%;
-		paddding: 0px;
 
-		}
+}
 
-		
+body {
 
-	#wrapper {
+font-size: 70%;
 
-		background-color: #ffF;
+}
 
-		border: 0px solid #000;
+p {padding: 7px 0 7px 0;}
 
-		padding: 0px;
 
-		width: 100%;
-		height: 100%;
 
-		margin: 0px auto;
+a {
 
-		}
+color: #000099;
 
-		
+}
 
-	#header {
+a:hover{
 
-		background-color: #58b2f1;
+color: #0000FF;
 
-		height: 10%;
-		
-				font-family: Courier;
-				font-size: 15px;
-				color: #fffff0;
+text-decoration: none;
 
-		}
+}
 
-		
 
-	#left {
 
-		background-color: #ffffff;
+h1, h2, h3 {
 
-		width: 10%;
+font-weight: bold;
 
-		height: 100%;
+padding-bottom: 5px;
 
-		float: left;
+}
 
-		font-family: Courier;
-		font-size: 10px;
-		color: #000000;		
+h1 {
 
-		}
+font-size: 2em;
 
-		
+}
 
-	#right {
+h2 {
 
-		background-color: #ffffff;
+font-size: 1.4em;
 
-		width: 10%;
+}
 
-		height: 550px;
+h3 {
 
-		float: right;
-		
-		font-family: Courier;
-		font-size: 10px;
-		color: #000000;
+font-size: 1.3em;
 
-		}
+}
 
-		
+h1 a, #header h2{
 
-	#center {
+color: #fff;
 
-		background-color: #fff999;
+}
 
-		margin-left: 0%;
+.clear { clear: both; }
 
-		margin-right: 15%;
-		width: 100%;
-		height: 550px;
-		
-		font-family: Courier;
-		font-size: 10px;
-		color: #000000;
-		}
+#mainContainer {
 
-	#footer {
+width: 760px;
 
-		width: 100%;
+margin: 0 auto; /*** Centers the design ***/
 
-		float: left;
+min-height: 100%;
 
-		height: 10%;
+background: #add8e6 url(/examples/three-column-100-bg.gif) repeat-y; /*** This is our faux columns ***/
 
-		background-color: #58b2f1;
-		
-				font-family: Courier;
-				font-size: 10px;
-				color: #fffff0;
+text-align: left; /*** Because we centered the text in body we have to move the text back to left aligning ***/
 
-		}
+}
 
-		
+* html #mainContainer {
 
-	
+height: 100%;  /*** IE doesn't support min-height, but instead it handles height as min-height so we need to hack the height ***/
 
-	
+}
 
-	</style>
+/**************************
+
+HEADER
+
+**************************/
+
+#header {
+
+background: #000099;
+
+padding: 10px
+
+}
+
+/**************************
+
+CONTENT AND COLUMNS
+
+**************************/
+
+.outer {
+
+padding-left: 165px;  
+
+}
+
+* html .outer {
+
+padding-right: 120px; /* Normally this shouldn't be in this hack, it should be in .outer, but because of IE7 I had to */
+
+}
+
+.inner {
+
+width: 595px; /*** This width is for non-IE browsers. Mozilla makes this necessary. Be sure to check your layout in different browsers if you changes this value. Especially IE7 seems to create a horisontal scroll if this value is set too large ***/
+
+padding-bottom: 30px;
+
+}
+
+* html .inner {
+
+width: 100%;
+
+}
+
+/*** div.inner is wider than its container, div.outer, and so overlaps to the right, pushing
+
+div.right into the proper position. IE expands div.outer instead, requiring a Tan hack to avoid 
+
+blowing the layout apart. IE gets the original 100% width as in the Livingstone layout.
+
+***/
+
+.float-wrap {
+
+float: left;
+
+width: 630px;
+
+margin-left: -165px; /*** Same length as .outer padding-left but with negative value ***/
+
+}
+
+* html .float-wrap {
+
+/*** No need for hacking IE on this layout ***/
+
+}
+
+#content {
+
+float: right;
+
+width: 470px;
+
+background: #fff;
+
+}
+
+* html #content {
+
+position: relative;  /*** IE needs this  ***/
+
+}
+
+.contentWrap{
+
+padding: 5px;
+
+}
+
+.contentWrap ol, .contentWrap ul {
+
+margin: 3px 0 5px 35px;
+
+}
+
+.contentWrap li {
+
+padding-bottom: 2px;
+
+}
+
+/**************************
+
+LEFT COLUMN
+
+**************************/
+
+/*** div.left is in div.float-wrap, and when div.float-wrap is neg margined to the left, 
+
+div.left is carried over into the proper position. 
+
+***/
+
+#left {
+
+float: left;
+
+width: 150px;
+
+padding: 5px;
+
+}
+
+* html #left {
+
+position: relative;  /*** IE needs this  ***/
+
+}
+
+#left ul {
+
+list-style: none;
+
+padding-bottom: 4px;
+
+}
+
+#left li {
+
+padding-bottom: 2px;
+
+}
+
+/*************************
+
+RIGHT COLUMN
+
+**************************/
+
+#right {
+
+float: right; 
+
+width: 120px;
+
+padding: 5px;
+
+}
+
+* html #right {
+
+position: relative;  /*** IE needs this  ***/
+
+margin-right: -120px; /*** IE gets this margin. ***/
+
+}
+
+#right ul {
+
+list-style: none;
+
+padding-bottom: 4px;
+
+}
+
+#right li {
+
+padding-bottom: 2px;
+
+}
+
+/**************************
+
+FOOTER
+
+**************************/
+
+#footer {
+
+width: 760px;
+
+height: 30px; /*** The drawback with this solution is that the height of the footer can't be flexible. If you add so much content to the footer that it extends 30px, you will get a vertical scrollbar and the content will overflow the footer if you don't set overflow to hidden ***/
+
+margin: 0 auto;
+
+margin-top: -30px; /*** By using a negative margin-top we now moves the footer up the same amount as the footer height to avoid vertical scrolling. Remember, if you use borders and padding on your footer you will have to calculate this in your negative margin-top value also. ***/
+
+text-align: center;
+
+background-color: yellow;
+
+}
 
 </style>
-
-
+<link href="https://plus.google.com/106397767126613254720" rel="publisher"/>
+<script type="text/javascript">dataLayer=[{'pageGroup1':'CSS Examples'}];</script>
 </head>
-
-<body>
-
-<div id="wrapper">
-
-	<div id="header">
-	<p>&nbsp;</p>&nbsp;&nbsp;Water Sound Map
-
-	</div>
-
-	
-
-	<div id="main-section">
-
-	
-
-		<div id="left">
-
-		about</p></p>
-		sound map</p><li></li></p>
-		contact</p></p>
-		</div>
-
-	
-
-		<div id="right">
-
-		Tag Browser
-
-		</div>
-
-
-		<div id="center">
-		
+<body><noscript><meta HTTP-EQUIV="refresh" content="0;url='http://www.savio.no/examples/three-column-layout-6.asp?PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="http://www.savio.no/examples/three-column-layout-6.asp?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-B4C8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-B4C8');</script>
+<div id="mainContainer">
+<div id="header">
+<h1><a href="http://www.savio.no/" title="Savio.no">Savio.no</a></h1>
+<h2>Three column CSS layout: 100% height with footer</h2>
+</div>
+<div class="outer">
+<div class="inner">
+<div class="float-wrap">
+<div id="content">
+<div class="contentWrap">
 		    <div id="map-canvas"></div>
-    <style>
+<style>
       html, body, #map-canvas {
-        height: 100%;
+        min-height: 550px;
         margin: 0px;
         padding: 0px
       }
@@ -310,74 +483,41 @@ height: 100%;
 				google.maps.event.addDomListener(window, 'load', initialize);
 
 					</script>
+</div>
+</div>
+<div id="left">
+<h3>Second in source</h3>
+<ul>
+<li><a href="#">Left menu 1</a></li>
+<li><a href="#">Left menu 2</a></li>
+<li><a href="#">Left menu 3</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div id="right">
+<h3>Third in source</h3>
+<ul>
+<li><a href="#">Right menu 1</a></li>
+<li><a href="#">Right menu 2</a></li>
+<li><a href="#">Right menu 3</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div id="footer"><p>This is our footer</p>
+</div>
+<script pagespeed_no_defer="" type="text/javascript">(function(){window.pagespeed=window.pagespeed||{};var l=window.pagespeed;
+l.getResourceTimingData=function(){if(window.performance&&(window.performance.getEntries||window.performance.webkitGetEntries)){for(var m=0,n=0,e=0,p=0,f=0,q=0,g=0,r=0,h=0,s=0,k=0,c={},d=window.performance.getEntries?window.performance.getEntries():window.performance.webkitGetEntries(),b=0;b<d.length;b++){var a=d[b].duration;0<a&&(m+=a,++e,n=Math.max(n,a));a=d[b].connectEnd-d[b].connectStart;0<a&&(q+=a,++g);a=d[b].domainLookupEnd-d[b].domainLookupStart;0<a&&(p+=a,++f);a=d[b].initiatorType;c[a]?++c[a]:
+c[a]=1;a=d[b].requestStart-d[b].fetchStart;0<a&&(s+=a,++k);a=d[b].responseStart-d[b].requestStart;0<a&&(r+=a,++h)}return"&afd="+(e?Math.round(m/e):0)+"&nfd="+e+"&mfd="+Math.round(n)+"&act="+(g?Math.round(q/g):0)+"&nct="+g+"&adt="+(f?Math.round(p/f):0)+"&ndt="+f+"&abt="+(k?Math.round(s/k):0)+"&nbt="+k+"&attfb="+(h?Math.round(r/h):0)+"&nttfb="+h+(c.css?"&rit_css="+c.css:"")+(c.link?"&rit_link="+c.link:"")+(c.script?"&rit_script="+c.script:"")+(c.img?"&rit_img="+c.img:"")}return""};
+l.getResourceTimingData=l.getResourceTimingData;})();
+(function(){window.pagespeed=window.pagespeed||{};var e=window.pagespeed;function g(a,c,b,d){this.c=a;this.a=c;this.b=b;this.d=d}e.beaconUrl="";
+g.prototype.sendBeacon=function(){var a=this.c,c=window.mod_pagespeed_start,b=Number(new Date)-c,a=a+(-1==a.indexOf("?")?"?":"&"),a=a+"ets="+("load"==this.a?"load:":"unload:"),a=a+b;if("beforeunload"!=this.a||!window.mod_pagespeed_loaded){a+="&r"+this.a+"=";if(window.performance){var b=window.performance.timing,d=b.navigationStart,f=b.requestStart,a=a+(b[this.a+"EventStart"]-d),a=a+("&nav="+(b.fetchStart-d)),a=a+("&dns="+(b.domainLookupEnd-b.domainLookupStart)),a=a+("&connect="+(b.connectEnd-b.connectStart)),
+a=a+("&req_start="+(f-d)),a=a+("&ttfb="+(b.responseStart-f)),a=a+("&dwld="+(b.responseEnd-b.responseStart)),a=a+("&dom_c="+(b.domContentLoadedEventStart-d));window.performance.navigation&&(a+="&nt="+window.performance.navigation.type);d=-1;b.msFirstPaint?d=b.msFirstPaint:window.chrome&&window.chrome.loadTimes&&(d=Math.floor(1E3*window.chrome.loadTimes().firstPaintTime));d-=f;0<=d&&(a+="&fp="+d)}else a+=b;e.getResourceTimingData&&window.parent==window&&(a+=e.getResourceTimingData());a+=window.parent!=
+window?"&ifr=1":"&ifr=0";"load"==this.a&&(window.mod_pagespeed_loaded=!0,(b=window.mod_pagespeed_num_resources_prefetched)&&(a+="&nrp="+b),(b=window.mod_pagespeed_prefetch_start)&&(a+="&htmlAt="+(c-b)));e.panelLoader&&(c=e.panelLoader.getCsiTimingsString(),""!=c&&(a+="&b_csi="+c));e.criticalCss&&(c=e.criticalCss,a+="&ccis="+c.total_critical_inlined_size+"&cces="+c.total_original_external_size+"&ccos="+c.total_overhead_size+"&ccrl="+c.num_replaced_links+"&ccul="+c.num_unreplaced_links);""!=this.b&&
+(a+=this.b);document.referrer&&(a+="&ref="+encodeURIComponent(document.referrer));a+="&url="+encodeURIComponent(this.d);e.beaconUrl=a;(new Image).src=a}};e.e=function(a,c,b,d){var f=new g(a,c,b,d);window.addEventListener?window.addEventListener(c,function(){f.sendBeacon()},!1):window.attachEvent("on"+c,function(){f.sendBeacon()})};e.addInstrumentationInit=e.e;})();
 
-		</div>
-
-	
-
-	</div> <!-- end of main section -->
-
-	
-
-	<div id="footer">
-
-	
-
-		<div id="foot1">
-
-	<p>&nbsp;</p>&nbsp;&nbsp;All rights reserved. 
-
-		</div>
-
-		
-
-		<div id="foot2">
-
-
-
-		</div>
-
-	
-
-	</div>
-
-
-
-
-
-</div><!-- end of wrapper -->
-
-</body>
-
+pagespeed.addInstrumentationInit('http://1-ps.googleusercontent.com/beacon?org=123_1_gu', 'load', '&s_ttfb=764&id=1417518836773471', 'http://www.savio.no/examples/three-column-layout-6.asp');</script></body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
