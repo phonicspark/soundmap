@@ -1,28 +1,17 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-		
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
 	<title>Water Sound Map</title>
-
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-
-	<meta name="author" content="Ralph Phillips" />
-
-	<meta name="description" content="brief page description" />
-
-	<meta name="keywords" content="keywords, for, your, site" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-	
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="author" content="Ralph Phillips" />
+		<meta name="description" content="brief page description" />
+		<meta name="keywords" content="keywords, for, your, site" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
     <script src="./audiojs/audio.min.js"></script>
 	<script>
 	  audiojs.events.ready(function() {
@@ -32,91 +21,51 @@
 	
 	<style type="text/css">
 
-	
-
 	* {
-
 		margin: 0px;
-
 		padding: 0px;
-
 		}
-
-		
 
 	#wrapper {
-
 		background-color: #ffF;
-
 		border: 0px solid #000;
-
 		padding: 0px;
-
 		width: 100%;
 		height: 100%;
-
 		margin: 0px auto;
-
 		}
-
-		
 
 	#header {
-
 		background-color: #58b2f1;
-
 		height: 10%;
-		
-				font-family: Courier;
-				font-size: 15px;
-				color: #ffffff;
-
+		font-family: Courier;
+		font-size: 15px;
+		color: #ffffff;
 		}
-
-		
 
 	#left {
-
 		background-color: #ffffff;
-
 		width: 10%;
-
 		height: 550px;
-
 		float: left;
-
 		font-family: Courier;
-		font-size: 10px;
+		font-size: 12px;
 		color: #000000;		
-
 		}
-
-		
 
 	#right {
-
 		background-color: #ffffff;
-
 		width: 10%;
-
 		height: 550px;
-
 		float: right;
-		
 		font-family: Courier;
-		font-size: 10px;
+		font-size: 12px;
 		color: #000000;
-
 		}
 
-		
-
 	#center {
-
 		background-color: #ffffff;
-
 		margin-left: 0%;
-
 		margin-right: 15%;
 		width: 100%;
 		height: 550px;
@@ -127,105 +76,88 @@
 		}
 
 	#footer {
-
 		width: 100%;
-
 		float: left;
-
 		height: 5%;
-
 		background-color: #58b2f1;
-		
-				font-family: Courier;
-				font-size: 10px;
-				color: #fffff0;
-
+		font-family: Courier;
+		font-size: 10px;
+		color: #fffff0;
 		}
 
-		
-
-	
-
-	
-
+	}
 	</style>
-
 </style>
-
-
 </head>
 
 <body>
-
 <div id="wrapper">
-
 	<div id="header">
-	<p>&nbsp;</p>&nbsp;&nbsp;Water Sound Map
-
+	<p>&nbsp;</p>&nbsp;&nbsp;<a href="http://phonicspark.github.io/soundmap/index.html" title="Water Sound Map">Water Sound Map</a>
 	</div>
 
-	
-
 	<div id="main-section">
-
-	
-
 		<div id="left">
-
-		about</p></p>
-		sound map</p><li></li></p>
-		contact</p></p>
+		<li><a href="#">About</a></li></p>
+		<li><a href="#">Sound map</a></li></p>
+		<li><a href="#">Contact</a></li></p>
 		</div>
-
-	
 
 		<div id="right">
-
-		Tag Browser
-
+		&nbsp;Tag Browser
 		</div>
-
 
 		<div id="center">
 		
 		    <div id="map-canvas"></div>
-    <style>
-      html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-    </style>
-					<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=en"></script>
-	
-					<script>
-					// This example displays a marker at the center of Australia.
-					// When the user clicks the marker, an info window opens.
-					// The maximum width of the info window is set to 200 pixels.
+		<style>
+		  html, body, #map-canvas {
+			height: 100%;
+			margin: 0px;
+			padding: 0px
+		  }
+		</style>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=en"></script>
+
+			<script>
+			// This example displays a marker at the center of Australia.
+			// When the user clicks the marker, an info window opens.
+			// The maximum width of the info window is set to 200 pixels.
 
 				function initialize() {
 					var image = './icon2.png';
-					var myLatlng = new google.maps.LatLng(36.361243, 127.357535);
+					var myLatlng = new google.maps.LatLng(36.372955, 127.363736);
 					var mapOptions = {
 					mapTypeId: google.maps.MapTypeId.HYBRID,
-					zoom: 16,
+					zoom: 15,
 					center: myLatlng,
 					};
 
 				// set a map and applying tilt
 				  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-				  map.setTilt(45);
+				  //map.setTilt(45);
   
 					  var bounds = new google.maps.LatLngBounds();
 
 					// Multiple Markers
 					var markers = [
 						['Test 1', 36.361243, 127.357535],
-						['Test 2', 36.361243, 127.362335]
+						['Test 2', 36.361243, 127.362335],
+						['Test 3', 36.364159, 127.363984], 
+						['Test 4', 36.365645, 127.368769],
+						['Test 5', 36.375858, 127.365260],
+						['Test 6', 36.375581, 127.366413],
+						['Test 7', 36.375443, 127.369267],
+						['Test 8', 36.364558, 127.366435], 
+						['Test 9', 36.369841, 127.372611],
+						['Test 10', 36.363119, 127.361239]
+						
 					];
 						// Info Window Content
 					var infoWindowContent = [
-						['<div style="width:500px; height:290px;" class="info-window">' +
+					
+						[
+						'<div style="width:550px; height:290px;" class="info-window">' +
 						'<div id="content">'+
 					  '<div id="siteNotice">'+
 					  '</div>'+
@@ -244,9 +176,10 @@
 					  '</div>'+
 					  '</div>'],
 	   
-						['<div style="width:500px; height:290px;" class="info-window">' +
+						['<div style="width:550px; height:290px;" class="info-window">' +
 						'<div id="content">'+
 					  '<div id="siteNotice">'+
+					  
 					  '</div>'+
 					  '<p></p>'+
 					  '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
@@ -261,6 +194,163 @@
 					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
 					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
 					  '(last visited June 22, 2009).</p>'+
+					  '</div>'+
+					  '</div>'], 
+					  
+        				['<div style="width:550px; height:290px;" class="info-window">' +
+						'<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<p></p>'+
+					  '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
+					  '<div id="bodyContent">'+
+					  '<p>세 번째 소리 테스트 입니다. ' +
+					  '<p><img src="img1.png" /></p>'+
+					  '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
+					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
+					  'Link</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '<p><img src="test1-1.png" /></p>'+
+					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '</div>'+
+					  '</div>'], 
+					  
+					    ['<div style="width:550px; height:290px;" class="info-window">' +
+						'<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<p></p>'+
+					  '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
+					  '<div id="bodyContent">'+
+					  '<p>네 번째 소리 테스트 입니다. ' +
+					  '<p><img src="img1.png" /></p>'+
+					  '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
+					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
+					  'Link</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '<p><img src="test1-1.png" /></p>'+
+					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '</div>'+
+					  '</div>'], 
+					  
+					    ['<div style="width:550px; height:290px;" class="info-window">' +
+						'<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<p></p>'+
+					  '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
+					  '<div id="bodyContent">'+
+					  '<p>다섯 번째 소리 테스트 입니다. ' +
+					  '<p><img src="img1.png" /></p>'+
+					  '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
+					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
+					  'Link</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '<p><img src="test1-1.png" /></p>'+
+					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '</div>'+
+					  '</div>'],
+					  
+					  	['<div style="width:550px; height:290px;" class="info-window">' +
+						'<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<p></p>'+
+					  '<h5 id="firstHeading" class="firstHeading">Water Sound Sample Test</h5>'+
+					  '<div id="bodyContent">'+
+					  '<h5>여섯 번째 소리 테스트 입니다.</h5> ' +
+					  '<img width="250" src="img1.png" />'+
+					  '<audio src="./ZOOM0006.mp3" preload="auto" /></audio>' +
+					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
+					  'Link</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '</div>'+
+					  '</div>'],
+	   
+						['<div style="width:550px; height:290px;" class="info-window">' +
+						'<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<p></p>'+
+					  '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
+					  '<div id="bodyContent">'+
+					  '<p>일곱 번째 소리 테스트 입니다. ' +
+					  '<p><img src="img1.png" /></p>'+
+					  '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
+					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
+					  'Link</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '<p><img src="test1-1.png" /></p>'+
+					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '</div>'+
+					  '</div>'], 
+					  
+        				['<div style="width:550px; height:290px;" class="info-window">' +
+						'<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<p></p>'+
+					  '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
+					  '<div id="bodyContent">'+
+					  '<p>여덟 번째 소리 테스트 입니다. ' +
+					  '<p><img src="img1.png" /></p>'+
+					  '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
+					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
+					  'Link</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '<p><img src="test1-1.png" /></p>'+
+					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '</div>'+
+					  '</div>'], 
+					  
+					    ['<div style="width:550px; height:290px;" class="info-window">' +
+						'<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<p></p>'+
+					  '<h3 id="firstHeading" class="firstHeading">Water Sound Sample Test</h3>'+
+					  '<div id="bodyContent">'+
+					  '<p>아홉 번째 소리 테스트 입니다. ' +
+					  '<p><img src="img1.png" /></p>'+
+					  '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
+					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
+					  'Link</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '<p><img src="test1-1.png" /></p>'+
+					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '</div>'+
+					  '</div>'], 
+					  
+					    ['<div style="width:550px; height:400px;" class="info-window">' +
+						'<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<p></p>'+
+					  '<p>Water Sound Sample Test 1</p>'+
+					  '<p><img src="https://31.media.tumblr.com/12c1abf9d04c270e797cc7b59a78d2d1/tumblr_inline_nfyo1cZfyq1qzlze5.png" width="480px;/" /></p>'+
+					  '<p></p>'+
+					  '<p><audio src="./ZOOM0006.mp3" preload="auto" /></audio></p>' +
+					  '<p>first test, <a href="http://phonicspark.github.io/soundmap/index.html">'+
+					  'Link</a> '+
+					  '(last visited June 22, 2009).</p>'+
+					  '<p><img src="test1-1.png" /></p>'+
+					  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+					  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
 					  '</div>'+
 					  '</div>']
 					];  
@@ -310,40 +400,15 @@
 				google.maps.event.addDomListener(window, 'load', initialize);
 
 					</script>
-
 		</div>
-
-	
 
 	</div> <!-- end of main section -->
 
-	
-
 	<div id="footer">
-
-	
-
 		<div id="foot1">
-
-	<p>&nbsp;</p>&nbsp;&nbsp;All rights reserved. 
-
+			<p>&nbsp;</p>&nbsp;&nbsp;All rights reserved. 
 		</div>
-
-		
-
-		<div id="foot2">
-
-
-
-		</div>
-
-	
-
 	</div>
-
-
-
-
 
 </div><!-- end of wrapper -->
 
